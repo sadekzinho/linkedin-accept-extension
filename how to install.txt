@@ -1,0 +1,23 @@
+HOW TO INSTALL CHROME EXTENSIONS (unpacked / developer mode)
+=============================================================
+
+1. Open Chrome and go to:  chrome://extensions/
+
+2. Turn on "Developer mode" (toggle in the top-right corner).
+
+3. Click "Load unpacked".
+
+4. Select the folder that contains the manifest.json file.
+
+5. Done! The extension icon should appear in the toolbar.
+   If not — click the puzzle icon and pin it.
+
+
+UPDATING AFTER CHANGES
+======================
+Go to chrome://extensions/ and click the reload icon on the extension card.
+
+
+REMOVING
+========
+Click "Remove" on the extension card at chrome://extensions/
