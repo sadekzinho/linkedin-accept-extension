@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 16px;
+      min-width: 320px;
+      color: #333;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: 16px;
+      color: #0A66C2;
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .hint {
+      font-size: 11px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    input[type="number"] {
+      width: 80px;
+      padding: 4px 6px;
+      font-size: 13px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .row {
+      margin-bottom: 14px;
+    }
+    .row-inline {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .row-inline .field {
+      display: flex;
+      flex-direction: column;
+    }
+    button {
+      background: #0A66C2;
+      color: #fff;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+    button:hover {
+      background: #004182;
+    }
+    #status {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #2e7d32;
+      min-height: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h2>LinkedIn Invitation Acceptor — Ustawienia</h2>
+
+  <div class="row">
+    <label>Opóźnienie między kliknięciami (ms)</label>
+    <div class="hint">Losowy interwał z podanego zakresu, symulujący ludzkie zachowanie</div>
+    <div class="row-inline">
+      <div class="field">
+        <label for="delayMin">Min</label>
+        <input type="number" id="delayMin" min="300" max="10000" step="100">
+      </div>
+      <div class="field">
+        <label for="delayMax">Max</label>
+        <input type="number" id="delayMax" min="500" max="15000" step="100">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <label for="batchLimit">Limit na jeden batch</label>
+    <div class="hint">Maksymalna liczba zaproszeń akceptowanych za jednym kliknięciem ikony</div>
+    <input type="number" id="batchLimit" min="1" max="500" step="1">
+  </div>
+
+  <button id="save">Zapisz</button>
+  <div id="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
